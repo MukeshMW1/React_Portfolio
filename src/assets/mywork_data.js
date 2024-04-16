@@ -23,7 +23,7 @@ const mywork_data = [
         w_no: 3,
         w_name: "Web design",
         w_img: project3_img,
-        w_link: "https://js-calculator-two-ebon.vercel.app/"
+        w_link: "https://raandom-quote-generator.vercel.app/"
     },
     {
         w_no: 4,

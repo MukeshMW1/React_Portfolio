@@ -7,7 +7,7 @@ import call_icon from '../../assets/call_icon.svg'
 
 
 const Contact = () => {
-    const [name, setName] = useStatye('')
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [msg, setMsg] = useState('')
 

@@ -163,14 +163,14 @@
 @media (max-width:768px) {
     .contact {
         gap: 50px;
-        margin: 50px 70px;
+        margin: 50px 60px;
         align-items: start;
 
     }
 
     .contact-title h1 {
         padding: 0;
-        font-size: 50px;
+        font-size: 2rem;
         font-weight: 600;
     }
 

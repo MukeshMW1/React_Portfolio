@@ -147,18 +147,18 @@
 @media (max-width:768px) {
     .about {
         gap: 80px;
-        margin: 50px 70px;
+        margin: 50px 60px;
         align-items: start;
 
     }
 
     .about-title h1 {
-        font-size: 50px;
+        font-size: 2rem;
         padding: 0;
     }
 
     .about-title img {
-        width: 130px;
+        width: 100px;
         right: -20px;
     }
 

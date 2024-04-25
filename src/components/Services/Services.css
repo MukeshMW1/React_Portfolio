@@ -122,7 +122,7 @@
 
     .services-format p {
         font-size: 1rem;
-        line-height: 1.5rem;
+        line-height: 1.6rem;
         max-width: 20vw;
         max-height: 10vh;
 
@@ -131,6 +131,7 @@
 
     .services-format .desc {
         overflow: hidden;
+        line-height: 1rem;
     }
 
 

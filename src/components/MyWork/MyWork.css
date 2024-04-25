@@ -138,16 +138,19 @@
     }
 
     .mywork-showmore {
-        padding: 20px 40px;
+        padding: 18px 17px;
         font-size: 18px;
-        margin: 50px auto;
+        margin: 40px auto;
 
     }
 
 
     .mywork-showmore p {
 
-        font-size: 14px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
 
     }

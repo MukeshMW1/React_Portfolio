@@ -23,7 +23,7 @@ const mywork_data = [
         w_no: 3,
         w_name: "Web design",
         w_img: project3_img,
-        w_link: "https://todo-list-stopwatch-digittal-clock-react-js.vercel.app/"
+        w_link: "https://portfolio-react-tailwind-get-forms.vercel.app/"
     },
     {
         w_no: 4,
@@ -35,7 +35,7 @@ const mywork_data = [
         w_no: 5,
         w_name: "Web design",
         w_img: project5_img,
-        w_link: "https://js-calculator-two-ebon.vercel.app/"
+        w_link: "https://todo-list-stopwatch-digittal-clock-react-js.vercel.app/"
     },
     {
         w_no: 6,

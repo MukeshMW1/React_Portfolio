@@ -22,7 +22,7 @@ const mywork_data = [
         w_no: 3,
         w_name: "Netflix Clone",
         w_img: project3_img,
-        w_link: "https://n-etflix-clone-react-js-and-firebase.vercel.app/"
+        w_link: "https://netflixcolne.vercel.app/login"
 
     },
     {

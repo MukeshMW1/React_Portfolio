@@ -3,8 +3,10 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './Hero.css'
 import profile_img from '../../assets/profile_img.svg'
 import { TypeAnimation } from 'react-type-animation';
+import filePath from '../../../public/Resume.pdf'
 
 const Hero = () => {
+
     return (
         <div id='home' className='hero'>
             <img src={profile_img} alt="" />
@@ -13,7 +15,7 @@ const Hero = () => {
 
             <div className="hero-connect">
                 <AnchorLink className='anchor-link' offset={50} href='#contact'> <button>Connect With Me</button></AnchorLink>
-                <button>My Resume</button>
+                <button><a href={filePath} download="resume.pdf">My Resume</a></button>
             </div>
 
         </div>

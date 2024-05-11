@@ -82,6 +82,10 @@
     margin-top: 20px;
 }
 
+.services-format .desc {
+    overflow: hidden;
+    line-height: 1.4rem;
+}
 
 @media (max-width:768px) {
     .services {

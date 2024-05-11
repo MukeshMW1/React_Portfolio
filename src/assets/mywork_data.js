@@ -8,32 +8,32 @@ import project6_img from '../assets/project_6.svg'
 const mywork_data = [
     {
         w_no: 1,
-        w_name: "Web design",
+        w_name: "Google Gemini",
         w_img: project1_img,
         w_link: "https://gemini-clone-teal.vercel.app/"
     },
     {
         w_no: 2,
-        w_name: "Web design",
+        w_name: "Tailwind Portfolio",
         w_img: project2_img,
         w_link: "https://portfolio-react-tailwind-get-forms.vercel.app/"
     },
     {
         w_no: 3,
-        w_name: "Web design",
+        w_name: "Netflix Clone",
         w_img: project3_img,
-        w_link: "https://portfolio-six-liart-15.vercel.app/"
+        w_link: "https://n-etflix-clone-react-js-and-firebase.vercel.app/"
 
     },
     {
         w_no: 4,
-        w_name: "Web design",
+        w_name: "Random Quote Generator",
         w_img: project4_img,
         w_link: "https://raandom-quote-generator.vercel.app/"
     },
     {
         w_no: 5,
-        w_name: "Web design",
+        w_name: "Stop Watch",
         w_img: project5_img,
         w_link: "https://todo-list-stopwatch-digittal-clock-react-js.vercel.app/"
     },

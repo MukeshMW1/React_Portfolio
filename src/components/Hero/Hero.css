@@ -8,8 +8,11 @@
 
 .hero img {
     margin-top: 40px;
-    /* width: 16vw; */
     transition: .5s;
+    border-radius:30% 80% ; 
+    height:400px;
+    width:300px;
+    object:cover;
 }
 
 

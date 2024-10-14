@@ -15,7 +15,8 @@
 
 .footer-title {
     cursor: pointer;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    padding: 20px 30px 0;
     font-weight: 600;
     color: #fff;
     margin-bottom: 20px;
@@ -27,13 +28,14 @@
     background: -webkit-linear-gradient(16deg, yellow, green, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: scale(.8);
+    transform: scale(.9);
+z-index: 2;
 }
 
 .footer-title img {
     position: absolute;
-    width: 10vw;
-    bottom: 0;
+    width:80px;
+    height:70px;
     top: 0;
     z-index: -1;
 }
@@ -41,13 +43,13 @@
 
 .footer-top-left p {
     max-width: 400px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .footer-top-right {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 
 }
 
@@ -57,14 +59,14 @@
     align-items: center;
     background: #32323b;
     border-radius: 40px;
-    padding: 20px 30px;
+    padding: 16px 20px;
     padding-right: 80px;
 }
 
 
 .footer-email-input input {
     background: transparent;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: Outfit;
     color: #a0a0a0;
     border: none;
@@ -74,8 +76,8 @@
 
 
 .footer-subscribe {
-    font-size: 1.2rem;
-    padding: 22px 50px;
+    font-size: 1rem;
+    padding: 16px 20px;
     border-radius: 50px;
     font-weight: 500;
     background: linear-gradient(180deg, rgb(2, 132, 102), rgb(0, 149, 0));
@@ -84,7 +86,7 @@
 }
 
 .footer-subscribe:hover {
-    transform: scale(.8);
+    transform: scale(.9);
     color: rgb(0, 219, 194);
 }
 
@@ -93,13 +95,13 @@
 .footer-bottom {
     display: flex;
     justify-content: space-between;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 40px;
 }
 
 .footer-bottom-right {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     margin-bottom: 50px;
 }
 

@@ -23,14 +23,15 @@ const MyWork = () => {
             {show ?
 
                 <>
-                    <div onClick={() => setShow(false)} className="mywork-showmore">
-                        <p>Show Less</p>
-                        <img src={arrow_icon} alt="" />
-                    </div>
+                 
                     <div className="show">
 
                         <h2><a href='https://github.com/MukeshMW1' target='_blank'>Githhub:Projects Repository</a></h2>
                         <h2><a href='https://leetcode.com/MukeshMW1/' target='_blank'>Leetcode :Leetcode Profile </a></h2>
+                    </div>
+                    <div onClick={() => setShow(false)} className="mywork-showmore">
+                        <p>Show Less</p>
+                        <img src={arrow_icon} alt="" />
                     </div>
                 </> :
                 <div onClick={() => setShow(true)} className="mywork-showmore">

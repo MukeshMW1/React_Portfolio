@@ -19,18 +19,19 @@ const About = () => {
                     <img src={profile_img} alt="" />
                 </div>
                 <div className="about-right">
-                    <div className="about-para"><p>I am an experienced frontend developer with more than 3 years of experience i.e. self where I have taken and completed a lot of projects.</p>
-                        <p>My passion for codeing and development increases as I dive more into this world of tech, not only have I goen in depth of Web Dev but I have also some knowldge about Machine Learning.</p></div>
+                    <div className="about-para"><p>I am an experienced frontend developer with more than 3 years of experience  where I have taken and completed a lot of projects.<br/>My passion for coding and development increases as I dive more into this world of tech, not only have I gone in depth of Web Dev but I have also some knowldge about Machine Learning.</p></div>
 
                     <div className="about-skills">
-                        <div className="about-skill"><p>HTML & CSS</p><hr style={{ width: "90%" }} /></div>
-                        <div className="about-skill"><p>React JS</p><hr style={{ width: "60%" }} /></div>
-                        <div className="about-skill"><p>Javascript</p><hr style={{ width: "80%" }} /></div>
-                        <div className="about-skill"><p>Python</p><hr style={{ width: "70%" }} /></div>
-                        <div className="about-skill"><p>Tailwind</p><hr style={{ width: "80%" }} /></div>
+                        <div className="about-skill"><p>Javascript</p><hr style={{ width: "50%" }} /></div>
+                        <div className="about-skill"><p>React JS</p><hr style={{ width: "50%" }} /></div>
+                        <div className="about-skill"><p>Tailwind</p><hr style={{ width: "50%" }} /></div>
+                        <div className="about-skill"><p>Firebase</p><hr style={{ width: "50%" }} /></div>
+                        <div className="about-skill"><p>Express JS</p><hr style={{ width: "50%" }} /></div>
+                        <div className="about-skill"><p>Python</p><hr style={{ width: "40%" }} /></div>
                         <div className="about-skill"><p>Node JS</p><hr style={{ width: "40%" }} /></div>
-                        <div className="about-skill"><p>Express JS</p><hr style={{ width: "30%" }} /></div>
-
+                        <div className="about-skill"><p>C and C++ </p><hr style={{ width: "20%" }} /></div>
+                        <div className="about-skill"><p>Flask</p><hr style={{ width: "50%" }} /></div>
+                        <div className="about-skill"><p>HTML & CSS</p><hr style={{ width: "50%" }} /></div>
                     </div>
                 </div>
             </div>

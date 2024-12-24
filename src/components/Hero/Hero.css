@@ -14,6 +14,7 @@
     height:250px;
     width:180px;
     object:cover;
+   
 }
 
 
@@ -38,6 +39,8 @@
 
 
 .hero p {
+   overflow-y: hidden
+   ;
     width: 50%;
     text-align: center;
     font-weight: 300;

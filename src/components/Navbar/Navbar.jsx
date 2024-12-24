@@ -6,7 +6,36 @@ import Mlogo from '../../assets/M3.gif'
 import underline from '../../assets/nav_underline.svg'
 import menu_open from '../../assets/menu_open.svg'
 import menu_close from '../../assets/menu_close.svg'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 const Navbar = () => {
+
+useGSAP(()=>{
+
+    var t1 = gsap.timeline();
+   t1.from('.logo',
+   {
+    opacity:0,
+    duration:.6,
+    y:100,
+  
+
+   }).from(".navbar ul li ",{
+    opacity:0,
+    duration:.4,
+    stagger:.4,
+    y:-50,
+    ease:'bounce'
+
+
+   }).from(".button",{
+    x:100,
+    opacity:0,
+    duration:.6,
+   })
+})
+
+
 
 
     const [menu, setMenu] = useState("");
@@ -47,7 +76,7 @@ const Navbar = () => {
                 </li>
             </ul>
 
-            <AnchorLink className='anchor-link' offset={50} href='#contact'> <div className="nav-connect">
+            <AnchorLink className='anchor-link button' offset={50} href='#contact'> <div className="nav-connect">
                 <button>Connect With Me</button>
             </div></AnchorLink>
 

@@ -4,9 +4,44 @@ import './Hero.css'
 import profile_img from '../../assets/profl.jpg'
 import { TypeAnimation } from 'react-type-animation';
 import filePath from '../../../public/Resume.pdf'
-
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 const Hero = () => {
+useGSAP(()=>{
+    gsap.from('.hero img',{
+        opacity:0,
+        duration:1,
+       
 
+    })
+
+var img = document.querySelector('.hero img')
+img.addEventListener('mouseover',()=>{
+    gsap.to('.hero img',{
+        scale:.8,
+        duration:.4
+    })
+})
+img.addEventListener('mouseleave',()=>{
+    gsap.to('.hero img',{
+        scale:1,
+        duration:.4
+    })
+
+   
+})
+gsap.from('.hero p,.hero h1',{
+    opacity:0,
+    duration:1,
+    y:100
+})
+gsap.from('.hero button.left',{
+
+    opacity:0,
+    duration:.2,
+    x:-600
+})
+},{scope:'.hero'})
     return (
         <div id='home' className='hero'>
             <img src={profile_img}  alt=""   />
@@ -14,8 +49,8 @@ const Hero = () => {
             <p>I am a frontend developer from Nepal , with 3 years of experience</p>
 
             <div className="hero-connect">
-                <AnchorLink className='anchor-link' offset={50} href='#contact'> <button>Connect With Me</button></AnchorLink>
-                <button><a href={filePath} download="resume.pdf">My Resume</a></button>
+                <AnchorLink className='anchor-link' offset={50} href='#contact'> <button className='left'>Connect With Me</button></AnchorLink>
+                <button className='right'><a href={filePath} download="resume.pdf">My Resume</a></button>
             </div>
 
         </div>

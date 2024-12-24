@@ -6,10 +6,12 @@ import Services from './components/Services/Services.jsx'
 import MyWork from './components/MyWork/MyWork.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import Cursor from './components/Cursor/Cursor.jsx'
 
 const App = () => {
   return (
     <div>
+      <Cursor/>
       <Navbar />
       <Hero />
       <About />

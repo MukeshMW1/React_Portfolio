@@ -16,7 +16,6 @@ useGSAP(()=>{
    var t1 = gsap.timeline();
    t1.from('.logo',
    {
-    opacity:0,
     duration:.6,
     y:100,
     

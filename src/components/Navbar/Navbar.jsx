@@ -12,22 +12,19 @@ const Navbar = () => {
 
 useGSAP(()=>{
 
-    var t1 = gsap.timeline();
+   var t1 = gsap.timeline();
    t1.from('.navbar .logo',
    {
     opacity:0,
     duration:.6,
     y:100,
-  
-
-   }).from(".navbar ul li .anchor-link ",{
+    
+   }).from(" .nav-menu .anchor-link ",{
     opacity:0,
     duration:.4,
     stagger:.4,
     y:-50,
     ease:'bounce'
-
-
    }).from(".button",{
     x:100,
     opacity:0,

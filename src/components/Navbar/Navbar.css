@@ -68,7 +68,7 @@ img:hover {
     margin: auto;
 }
 
-.nav-menu li:hover {
+.nav-menu li .anchor-link:hover {
     background: -webkit-linear-gradient(16deg, yellow, green);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

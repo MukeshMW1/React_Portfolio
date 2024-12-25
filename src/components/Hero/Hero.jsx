@@ -35,15 +35,15 @@ gsap.from('.hero p,.hero h1',{
     duration:1,
     y:100
 })
-gsap.from('.hero .anchor-link',{
+gsap.from('.hero-connect .anchor-link',{
 opacity:0,
-duration:.8,
-x:-100
+duration:1,
+
 })
-gsap.from(' .hero-connect button.right  ',{
+gsap.from('.hero-connect .right  ',{
 opacity:0,
-duration:.8,
-x:100
+duration:1,
+
 })
 })
     return (

@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    
 
 }
 
@@ -97,8 +98,8 @@
     height: 4px;
     border-radius: 50px;
     background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
-    transition: .3s;
-
+  
+      
 }
 
 .about-skill:hover {
@@ -120,7 +121,7 @@
     text-align: center;
     flex-direction: column;
     gap: 10px;
-    transition: .5s;
+    
 }
 
 

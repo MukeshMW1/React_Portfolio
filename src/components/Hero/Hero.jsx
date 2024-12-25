@@ -35,13 +35,17 @@ gsap.from('.hero p,.hero h1',{
     duration:1,
     y:100
 })
-gsap.from('.hero button.left',{
-
-    opacity:0,
-    duration:.2,
-    x:-600
+gsap.from('.hero .anchor-link',{
+opacity:0,
+duration:.8,
+x:-100
 })
-},{scope:'.hero'})
+gsap.from(' .hero-connect button.right  ',{
+opacity:0,
+duration:.8,
+x:100
+})
+})
     return (
         <div id='home' className='hero'>
             <img src={profile_img}  alt=""   />

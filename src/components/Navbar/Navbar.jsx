@@ -13,14 +13,14 @@ const Navbar = () => {
 useGSAP(()=>{
 
     var t1 = gsap.timeline();
-   t1.from('.logo',
+   t1.from('.navbar .logo',
    {
     opacity:0,
     duration:.6,
     y:100,
   
 
-   }).from(".navbar ul li ",{
+   }).from(".navbar ul li .anchor-link ",{
     opacity:0,
     duration:.4,
     stagger:.4,
@@ -49,6 +49,12 @@ useGSAP(()=>{
 
     const closeMenu = () => {
         menuRef.current.style.right = '-350px';
+//         useGSAP(()=>{
+//             gsap.to(".nav-menu",{
+// x:100,
+// opacity:0
+//             })
+//         })
     }
     return (
         <div className='navbar'>

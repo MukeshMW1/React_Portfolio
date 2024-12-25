@@ -13,7 +13,7 @@ const About = () => {
       scrollTrigger: {
         trigger: ".about",
         scrub: 3,
-        markers: true,
+        // markers: true,
         start: "top 50%",
         end: "top -20%",
       },

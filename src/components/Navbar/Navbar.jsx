@@ -12,71 +12,7 @@ import gsap from 'gsap'
 
 const Navbar = () => {
 
-useGSAP(()=>{
 
-   var t1 = gsap.timeline();
-   t1.from('.logo',
-   {
-    duration:.6,
-    y:100,
-    
-   }).from(" .nav-menu .anchor-link ",{
-    opacity:0,
-    duration:.4,
-    stagger:.4,
-    y:-50,
-    ease:'bounce'
-   }).from(".button",{
-    x:100,
-    opacity:0,
-    duration:.6,
-   })
-})
-
-
-const [lastScrollY,setLastScrollY] =useState(0);
-const [isNavVisible,setIsNavVisible] = useState(true)
-
-const  {y:currentScrollY}  = useWindowScroll()
-// console.log("This is current scroll y",currentScrollY)
-
-useEffect(()=>{
-// console.log("This is last scroll y",lastScrollY)
-if(currentScrollY === 0)
-{
-setIsNavVisible(true);
-navContainerRef.current.classList.remove('floating-nav')
-}
-else if(currentScrollY >lastScrollY){
-setIsNavVisible(false);
-navContainerRef.current.classList.remove('floating-nav')
-}
-else if(currentScrollY < lastScrollY){
-setIsNavVisible(true);
-navContainerRef.current.classList.add('floating-nav')
-}
-setLastScrollY(currentScrollY)
-
-
-},[currentScrollY,lastScrollY])
-
-
-useEffect(()=>{
-
-gsap.to(navContainerRef.current,{
-y:isNavVisible ? 0 :-100,
-opacity:isNavVisible ? 1:0,
-duration:0.5
-
-})
-
-},[isNavVisible])
-
-
-const handleScroll=()=>{
-  const {y} =useWindowScroll();
-
-}
 
 
 const navContainerRef = useRef(null)

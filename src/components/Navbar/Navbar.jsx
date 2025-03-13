@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState,useEffect } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './Navbar.css'
 import logo from '../../assets/logo.svg'

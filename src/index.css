@@ -2,3 +2,13 @@
 {
     overflow-x:hidden ;
 }
+
+
+
+@layer utilities {
+
+.floating-nav {
+    @apply bg-black rounded-[10px] ;
+  }
+
+}

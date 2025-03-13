@@ -7,6 +7,7 @@ import underline from '../../assets/nav_underline.svg'
 import menu_open from '../../assets/menu_open.svg'
 import menu_close from '../../assets/menu_close.svg'
 import { useGSAP } from '@gsap/react'
+import {useWindowScroll} from 'react-use';
 import gsap from 'gsap'
 
 const Navbar = () => {
@@ -33,8 +34,52 @@ useGSAP(()=>{
 })
 
 
+const [lastScrollY,setLastScrollY] =useState(0);
+const [isNavVisible,setIsNavVisible] = useState(true)
+
+const  {y:currentScrollY}  = useWindowScroll()
+// console.log("This is current scroll y",currentScrollY)
+
+useEffect(()=>{
+// console.log("This is last scroll y",lastScrollY)
+if(currentScrollY === 0)
+{
+setIsNavVisible(true);
+navContainerRef.current.classList.remove('floating-nav')
+}
+else if(currentScrollY >lastScrollY){
+setIsNavVisible(false);
+navContainerRef.current.classList.remove('floating-nav')
+}
+else if(currentScrollY < lastScrollY){
+setIsNavVisible(true);
+navContainerRef.current.classList.add('floating-nav')
+}
+setLastScrollY(currentScrollY)
 
 
+},[currentScrollY,lastScrollY])
+
+
+useEffect(()=>{
+
+gsap.to(navContainerRef.current,{
+y:isNavVisible ? 0 :-100,
+opacity:isNavVisible ? 1:0,
+duration:0.5
+
+})
+
+},[isNavVisible])
+
+
+const handleScroll=()=>{
+  const {y} =useWindowScroll();
+
+}
+
+
+const navContainerRef = useRef(null)
     const [menu, setMenu] = useState("");
     const menuRef = useRef();
 
@@ -54,7 +99,7 @@ useGSAP(()=>{
         menuRef.current.style.right = '-350px';
     }
     return (
-        <div className='navbar'>
+        <div className='navbar' ref={navContainerRef}>
             <img src={Mlogo} className='logo'></img>
             <img onClick={openMenu} src={menu_open} alt="" className='nav-mob-open' />
 

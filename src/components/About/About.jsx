@@ -12,20 +12,20 @@ const About = () => {
     let t1 = gsap.timeline({
       scrollTrigger: {
         trigger: ".about",
-        scrub: 3,
+        scrub: 2,
         // markers: true,
         start: "top 50%",
-        end: "top -20%",
+        end: "bottom bottom",
       },
     });
-    t1.from(".about-title", {
+    t1.from("#about-title", {
       opacity: 0,
       y: 100,
       duration: 0.8,
     })
       .from(".about-para", {
         opacity: 0,
-        y: 200,
+        y: 100,
         duration: 0.8,
       })
       .from(".about-left", {
@@ -53,7 +53,7 @@ const About = () => {
         },
         "skills"
       )
-      .from(".aa1,.about-achievements hr", {
+      .from("#about-achievements", {
         opacity: 0,
         duration: 0.8,
       });
@@ -61,7 +61,7 @@ const About = () => {
 
   return (
     <div id="about" className="about">
-      <div className="about-title">
+      <div className="about-title" id='about-title'>
         <h1>About Me</h1>
         <img src={theme_pattern}></img>
       </div>
@@ -73,7 +73,7 @@ const About = () => {
         <div className="about-right">
           <div className="about-para">
             <p>
-              I am an experienced frontend developer with more than 3 years of
+              I am an experienced frontend developer with more than 3 years of project based
               experience where I have taken and completed a lot of projects.
               <br />
               My passion for coding and development increases as I dive more
@@ -84,11 +84,11 @@ const About = () => {
 
           <div className="about-skills">
             <div className="about-skill">
-              <p>Javascript</p>
+              <p>PMERN</p>
               <hr style={{ width: "50%" }} />
             </div>
             <div className="about-skill">
-              <p>React JS</p>
+              <p>Prisma</p>
               <hr style={{ width: "50%" }} />
             </div>
             <div className="about-skill">
@@ -100,7 +100,7 @@ const About = () => {
               <hr style={{ width: "50%" }} />
             </div>
             <div className="about-skill">
-              <p>Express JS</p>
+              <p>Nest Js</p>
               <hr style={{ width: "50%" }} />
             </div>
             <div className="about-skill">
@@ -112,25 +112,25 @@ const About = () => {
               <hr style={{ width: "40%" }} />
             </div>
             <div className="about-skill">
-              <p>C and C++ </p>
+              <p>C/C++ </p>
               <hr style={{ width: "20%" }} />
             </div>
             <div className="about-skill">
-              <p>Flask</p>
-              <hr style={{ width: "50%" }} />
+              <p>AWS</p>
+              <hr style={{ width: "20%" }} />
             </div>
             <div className="about-skill">
-              <p>HTML & CSS</p>
+              <p>OAuth/JWT</p>
               <hr style={{ width: "50%" }} />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="about-achievements">
+      <div className="about-achievements" id='about-achievements'>
         <div className="about-achievement aa1">
           <h1>3+</h1>
-          <p>Yeras Of Experience</p>
+          <p>Years Project Experience</p>
         </div>
         <hr />
         <div className="about-achievement aa1">
@@ -139,8 +139,8 @@ const About = () => {
         </div>
         <hr />
         <div className="about-achievement aa1">
-          <h1>3+</h1>
-          <p>Happy Clients</p>
+          <h1>10+</h1>
+          <p>Major  Porjects</p>
         </div>
       </div>
     </div>

@@ -3,9 +3,49 @@ import './Footer.css'
 import theme_icon from '../../assets/theme_pattern.svg'
 import footer_logo from '../../assets/footer_logo.svg'
 import user_icon from '../../assets/user_icon.svg'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import {ScrollTrigger} from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
 const Footer = () => {
+    useGSAP(()=>{
+
+        let t1 = gsap.timeline(
+            {
+                scrollTrigger:{
+                    trigger:"#footer",
+                    start:'top 500 ',
+                    end:'bottom 400',
+                    scrub:1
+                }
+            }
+        )
+        
+        t1.from('#footer',{
+            y:100,
+            opacity:0,
+            duration:'.4'
+           
+        })
+
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
-        <div className='footer'>
+        <div className='footer' id='footer'>
             <div className='footer-top'>
                 <div className="footer-top-left"
                 >
@@ -13,7 +53,7 @@ const Footer = () => {
                         <h1>MW</h1>
                         <img src={theme_icon}></img>
                     </div>
-                    <p>I am a frontend develooper with more than 3 years of experience where I have completed more than 30 projects.I am self learner where I have taken the help  of online tutorials fro making new things. </p>
+                    <p>I am a frontend develooper with more than 3 years of  project based experience where I have completed more than 30 projects.I am self learner where I have taken the help  of web for developing new things. </p>
                 </div>
 
                 <div className="footer-top-right">

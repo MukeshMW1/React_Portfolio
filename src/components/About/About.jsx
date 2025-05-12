@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css";
 import theme_pattern from "../../assets/theme_pattern.svg";
 import profile_img from "../../assets/profl.jpg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {Chart as ChartJs, ArcElement, Tooltip, Legend} from 'chart.js';
+ChartJs.register(ArcElement, Tooltip, Legend);
+import { Doughnut } from 'react-chartjs-2';
+
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const About = () => {
+  const [showChart,setShowChart] = useState(false);
+ 
+
   useGSAP(() => {
     let t1 = gsap.timeline({
       scrollTrigger: {
@@ -16,6 +23,12 @@ const About = () => {
         // markers: true,
         start: "top 50%",
         end: "bottom bottom",
+        onEnter:()=>{
+          setShowChart(true);
+        },
+        onLeaveBack:()=>{
+          setShowChart(false);
+        }
       },
     });
     t1.from("#about-title", {
@@ -33,7 +46,7 @@ const About = () => {
         scale: 0,
       })
       .from(
-        ".about-skill p",
+        ".about-skills ",
         {
           opacity: 0,
           duration: .8,
@@ -42,22 +55,55 @@ const About = () => {
         },
         "skills"
       )
-      .from(
-        " hr",
-        {
-         width:"0%",
-          opacity: 0,
-          duration: .8,
-          stagger: 3,
-          x: 100,
-        },
-        "skills"
-      )
+      
       .from("#about-achievements", {
         opacity: 0,
         duration: 0.8,
       });
   });
+  
+
+
+const doughnutData = {
+  labels:[
+"PMERN",
+"Tailwind",
+"Github",
+"GSAP",
+"Python",
+"Docker",
+"Prisma",
+"Firebase",
+"Nest Js",
+
+  ],
+  datasets:[{
+    label:'Level',
+    data:[90,80,70,60,50,40,40,30,30],
+    backgroundColor:[
+      "#1E88E5", // Blue
+      "#F4511E", // Deep Orange
+      "#43A047", // Green
+      "#FB8C00", // Orange
+      "#8E24AA", // Purple
+      "#3949AB", // Indigo
+      "#00ACC1", // Cyan
+      "#D81B60", // Pink
+      "#FDD835"  // Yellow
+    ],
+    borderColor:"#fff",
+    borderWidth:2,
+
+  }]}
+const options ={
+  responsive:true,
+plugins:{
+  legend:false,
+  title:{text:"Tech Stack",display:true,}
+
+}
+}
+
 
   return (
     <div id="about" className="about">
@@ -82,51 +128,14 @@ const About = () => {
             </p>
           </div>
 
-          <div className="about-skills">
-            <div className="about-skill">
-              <p>PMERN</p>
-              <hr style={{ width: "50%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Prisma</p>
-              <hr style={{ width: "50%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Tailwind</p>
-              <hr style={{ width: "50%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Firebase</p>
-              <hr style={{ width: "50%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Nest Js</p>
-              <hr style={{ width: "50%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Python</p>
-              <hr style={{ width: "40%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Node JS</p>
-              <hr style={{ width: "40%" }} />
-            </div>
-            <div className="about-skill">
-              <p>C/C++ </p>
-              <hr style={{ width: "20%" }} />
-            </div>
-            <div className="about-skill">
-              <p>AWS</p>
-              <hr style={{ width: "20%" }} />
-            </div>
-            <div className="about-skill">
-              <p>OAuth/JWT</p>
-              <hr style={{ width: "50%" }} />
-            </div>
-          </div>
+         
         </div>
+        { showChart && 
+        <div className="about-skills">
+            <Doughnut data={doughnutData} options={options} />
+          </div>
+        }
       </div>
-
       <div className="about-achievements" id='about-achievements'>
         <div className="about-achievement aa1">
           <h1>3+</h1>

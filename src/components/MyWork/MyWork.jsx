@@ -59,12 +59,12 @@ duration:'.2'
         <div id='work' className='mywork'>
             <div className="mywork-title" id='work-title'>
                 <h1>My Latest Work</h1>
-                <img src={theme_img} alt="" />
+                <img src={theme_img} alt="" loading='lazy'/>
             </div>
             <div className="mywork-container" id='work-container'>
                 {mywork_data.map((data, index) => {
 
-                    return <a href={data.w_link} target='_blank'><img key={index} src={data.w_img}></img></a>
+                    return <a href={data.w_link} target='_blank'><img key={index} src={data.w_img} loading='lazy'/></a>
 
                 })}
             </div>
@@ -80,12 +80,12 @@ duration:'.2'
                     </div>
                     <div onClick={() => setShow(false)} className="mywork-showmore">
                         <p>Show Less</p>
-                        <img src={arrow_icon} alt="" />
+                        <img src={arrow_icon} alt="" loading='lazy'/>
                     </div>
                 </> :
                 <div onClick={() => setShow(true)} className="mywork-showmore" id='work-btn'>
                     <p>Show More</p>
-                    <img src={arrow_icon} alt="" />
+                    <img src={arrow_icon} alt="" loading='lazy' />
                 </div>}
 
 

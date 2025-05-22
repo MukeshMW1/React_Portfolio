@@ -3,7 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './Hero.css'
 import profile_img from '../../assets/profl.jpg'
 import { TypeAnimation } from 'react-type-animation';
-import filePath from '../../../public/Resume.pdf'
+import filePath from '/Resume.pdf'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 const Hero = () => {
